@@ -9,12 +9,11 @@ Touch the mouse or keyboard and it vanishes instantly.
 Built by **bloodtobomb**.
 
 ```
-+------------------------------+
-|   Aemy v1.0.0                |
-|   Journey well               |
-|   by bloodtobomb             |
-|   [ Close ]                  |
-+------------------------------+
++----------------------+
+|  Aemy                |
+|  Journey well        |
+|                      |
++----------------------+
 ```
 
 ## Download
@@ -119,7 +118,7 @@ your animation.
 
 ## Credits
 
-Made with love in **Solaris-3** - the planet where *Wuthering Waves* takes place.
+Made with love in **Solaris-3**.
 
 The default sprite animation is **Aemeath**, a playable Resonator from
 *Wuthering Waves* by **Kuro Games** (released 23 May 2024). She is a 5-star
