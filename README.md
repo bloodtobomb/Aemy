@@ -8,14 +8,6 @@ Touch the mouse or keyboard and it vanishes instantly.
 
 Built by **bloodtobomb**.
 
-```
-+----------------------+
-|  Aemy                |
-|  Journey well        |
-|                      |
-+----------------------+
-```
-
 ## Download
 
 Grab **`Aemy-1.0.0-win64.zip`** from the [Releases page](../../releases).
