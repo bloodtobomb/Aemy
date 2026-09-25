@@ -1,0 +1,28 @@
+# --- build artefacts ---
+build/
+dist/
+release/
+*.spec
+__pycache__/
+*.pyc
+_tclsrc/
+app.ico
+aemy.log
+
+# --- sprite artwork: NOT committed ---
+# frames_clean2/ holds Wuthering Waves fan art and is deliberately kept out
+# of this repository. Drop your own frames in there before building.
+frames_clean2/
+
+# --- unused earlier output, not needed to build or run Aemy ---
+frames_clean/
+overlay_output/
+
+# --- the other helper scripts in this folder, not part of Aemy ---
+aa.py
+aemy.py
+tempCodeRunnerFile.python
+aicon.jpg
+
+# --- raw source frames (frames_clean2 is the build input) ---
+/[0-9][0-9][0-9][0-9].png
