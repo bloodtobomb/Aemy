@@ -10,13 +10,16 @@ Built by **bloodtobomb**.
 
 ## Download
 
-Grab **`Aemy-1.0.0-win64.zip`** from the [Releases page](../../releases).
+Grab **`Aemy-1.0.0-win64.exe`** from the [Releases page](../../releases).
 
-1. Unzip it anywhere (Desktop, Program Files, a USB stick - anywhere)
-2. Run `Aemy\Aemy.exe`
+1. Download it anywhere (Desktop, Program Files, a USB stick - anywhere)
+2. Run `Aemy.exe`
 3. Nothing appears to happen - **that is correct.** The icon goes to the
    system tray, bottom-right near the clock. It may be behind the `^` arrow.
 4. Right-click the tray icon for the menu. **Exit** closes it.
+
+It is a single self-contained file - nothing to unzip, no installer. The first
+run takes a few seconds longer while it unpacks itself into a temporary folder.
 
 Nothing is installed. No registry entries, no startup entry, no files written
 anywhere.
@@ -49,8 +52,8 @@ code is in this repository**, about 600 lines, and you can read every line.
 Verify the file you downloaded:
 
 ```
-SHA256  9535A94468637CD6B54F34B8D32B845C827EBD854DE5AD7A55DEA4B930724309
-        (Aemy.exe inside the zip)
+SHA256  9AFE871A6E951793FAB91E0DDD843A02F80B0709FA4C49A574F180B9B7248697
+        (Aemy.exe)
 ```
 
 If your antivirus quarantines it, either add an exclusion, or build it yourself
@@ -75,15 +78,17 @@ repository** - you bring your own animation.
 pip install pillow pystray pyinstaller
 git clone https://github.com/bloodtobomb/Aemy.git
 cd Aemy
-build_onedir.bat
+build.bat
 ```
 
 The build script stops with a clear message if `frames\` is empty.
 
-Output: `dist\Aemy\Aemy.exe`
+Output: `dist\Aemy.exe` - a single self-contained executable.
 
-`build.bat` produces a single-file build instead. The release uses the folder
-build, because it triggers noticeably fewer antivirus false positives.
+`build_onedir.bat` produces a folder build instead. The release uses the
+single-file build, so there is nothing to unzip. Note that the single-file
+build triggers noticeably more antivirus false positives, for the reasons
+above.
 
 The build scripts handle two Python 3.13+ quirks automatically: unpacking the
 Tcl/Tk zip archives that PyInstaller cannot bundle, and generating the app icon
