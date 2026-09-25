@@ -16,7 +16,6 @@ Grab **`Aemy-1.0.0-win64.exe`** from the [Releases page](../../releases).
 2. Run `Aemy.exe`
 3. Nothing appears to happen - **that is correct.** The icon goes to the
    system tray, bottom-right near the clock. It may be behind the `^` arrow.
-4. Right-click the tray icon for the menu. **Exit** closes it.
 
 It is a single self-contained file - nothing to unzip, no installer. The first
 run takes a few seconds longer while it unpacks itself into a temporary folder.
@@ -24,11 +23,31 @@ run takes a few seconds longer while it unpacks itself into a temporary folder.
 Nothing is installed. No registry entries, no startup entry, no files written
 anywhere.
 
+## How to exit
+
+**Right-click the tray icon, then click Exit.** That is the only way to fully
+quit, and it always works.
+
+Aemy has no window, no taskbar button and no close button - that is deliberate.
+If you want to stop it for now without quitting, just move the mouse; the
+overlay is click-through, so it vanishes on the first input.
+
+If you picked **Show now** from the tray menu, the overlay stays put until you
+dismiss it, because auto-show would otherwise bring it straight back:
+
+- press **Esc** to dismiss it, or
+- right-click the tray icon and click **Show now** again to toggle it off, or
+- right-click the tray icon and click **Exit** to quit Aemy entirely
+
+Lost the tray icon? It may be tucked behind the `^` arrow next to the clock.
+Click that arrow to reveal it.
+
 ## Features
 
 - **Idle-triggered** - appears after a set delay with no input (default 1 min)
 - **Instant dismissal** - move the mouse or type and it is gone
 - **Tray-only** - no window, no taskbar button, no console
+- **Easy to quit** - right-click the tray icon, Exit. No close button to hunt for
 - **Live settings** - idle delay, playback speed and loop pause, all adjustable
   from the tray menu without restarting
 - **Any resolution** - scales to your real screen pixels at 100/125/150 percent DPI
