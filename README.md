@@ -58,7 +58,7 @@ code is in this repository**, about 600 lines, and you can read every line.
 Verify the file you downloaded:
 
 ```
-SHA256  B27CD167130033DEB4FD32572A4984B89EB0B0B74F0B1FF5318258A0280A49F1
+SHA256  ECEF2AAA5428DB15767B4356F2096D611DBC939FF8EAD18DA8DB6DE973696456
         (Aemy.exe inside the zip)
 ```
 
@@ -76,7 +76,7 @@ from source - it takes one command.
 Aemy is the screensaver engine. **The sprite artwork is not part of this
 repository** - you bring your own animation.
 
-1. Put your frames in `frames_clean2\` as a numbered PNG sequence
+1. Put your frames in `frames\` as a numbered PNG sequence
    (`0001.png`, `0002.png`, ... `0121.png`). Transparent PNG works best.
 2. Then build:
 
@@ -87,7 +87,7 @@ cd Aemy
 build_onedir.bat
 ```
 
-The build script stops with a clear message if `frames_clean2\` is empty.
+The build script stops with a clear message if `frames\` is empty.
 
 Output: `dist\Aemy\Aemy.exe`
 

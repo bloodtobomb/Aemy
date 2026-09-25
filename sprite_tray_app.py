@@ -4,7 +4,7 @@ sprite_tray_app.py  (Windows only)  --  Aemy
 
 Aemy runs quietly in the system tray. When the PC sits idle (no mouse or
 keyboard input for a chosen amount of time) it shows your transparent sprite
-animation from frames_clean2 as a fullscreen, click-through, always-on-top
+animation from frames as a fullscreen, click-through, always-on-top
 overlay -- a custom screensaver. The instant you touch the mouse or keyboard
 again, the overlay disappears and you are back to your normal desktop.
 
@@ -352,7 +352,7 @@ def make_tray_icon_image():
                 return _fit_into_canvas(Image.open(icon_path))
             except Exception:
                 pass
-    candidates = sorted(glob.glob(os.path.join(resource_path("frames_clean2"), "*.png")))
+    candidates = sorted(glob.glob(os.path.join(resource_path("frames"), "*.png")))
     if candidates:
         try:
             return _fit_into_canvas(Image.open(candidates[len(candidates) // 2]))
@@ -651,7 +651,7 @@ class TrayApp:
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--frames-dir", default=resource_path("frames_clean2"))
+    ap.add_argument("--frames-dir", default=resource_path("frames"))
     ap.add_argument("--fps", type=int, default=DEFAULT_FPS)
     ap.add_argument("--idle-seconds", type=int, default=60)
     ap.add_argument("--sprite-scale", type=float, default=1.0)
