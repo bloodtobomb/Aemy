@@ -58,7 +58,7 @@ code is in this repository**, about 600 lines, and you can read every line.
 Verify the file you downloaded:
 
 ```
-SHA256  ECEF2AAA5428DB15767B4356F2096D611DBC939FF8EAD18DA8DB6DE973696456
+SHA256  A71121AFE6B73155CED09135BB0DCF372792D9AF053254FDCE9231B3139B9E47
         (Aemy.exe inside the zip)
 ```
 
@@ -119,9 +119,26 @@ your animation.
 
 ## Credits
 
-Sprite artwork is fan art derived from **Aemeath** in *Wuthering Waves* by
-Kuro Games. This project is not affiliated with or endorsed by Kuro Games. All
-game assets belong to their respective owners.
+Made with love in **Solaris-3** - the planet where *Wuthering Waves* takes place.
+
+The default sprite animation is **Aemeath**, a playable Resonator from
+*Wuthering Waves* by **Kuro Games** (released 23 May 2024). She is a 5-star
+Fusion wielder who fights with a sword and rides the night sky behind her
+Mechascout.
+
+- Wuthering Waves: <https://wutheringwaves.com>
+- Kuro Games: <https://kurogames.com>
+
+**Aemeath and all related game assets belong to Kuro Games.** This is an
+unofficial fan project. Aemy is not affiliated with, endorsed by or connected
+to Kuro Games, and *Wuthering Waves* is a trademark of its respective owner.
+The Aemy code is original and MIT-licensed; the sprite artwork is not, and is
+deliberately not included in this repository.
+
+If you are a rights holder and want this removed, open an issue and it will be
+taken down straight away.
+
+**Aemy** was built by **bloodtobomb**, using Tkinter, Pillow and pystray.
 
 ## Licence
 

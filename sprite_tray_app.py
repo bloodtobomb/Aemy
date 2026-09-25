@@ -503,6 +503,10 @@ class OverlayController:
                  font=("Segoe UI", 10, "italic")).pack()
         tk.Label(top, text="by bloodtobomb", bg=BG, fg="#6f6a9c",
                  font=("Segoe UI", 8)).pack(pady=(3, 0))
+        # \U0001F497 is the pink heart. Written as an escape so this file
+        # stays pure ASCII and cannot be corrupted by an editor's encoding.
+        tk.Label(top, text="made in \U0001F497 in Solaris-3", bg=BG, fg=PINK,
+                 font=("Segoe UI", 8)).pack()
         tk.Frame(top, bg=PINK, height=1).pack(fill="x", padx=30, pady=(12, 16))
         tk.Button(top, text="Close", width=10, command=top.destroy, bg=BG,
                   fg=CYAN, activebackground="#2a2233", activeforeground=PINK,
