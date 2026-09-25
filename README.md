@@ -58,7 +58,7 @@ code is in this repository**, about 600 lines, and you can read every line.
 Verify the file you downloaded:
 
 ```
-SHA256  A71121AFE6B73155CED09135BB0DCF372792D9AF053254FDCE9231B3139B9E47
+SHA256  9535A94468637CD6B54F34B8D32B845C827EBD854DE5AD7A55DEA4B930724309
         (Aemy.exe inside the zip)
 ```
 

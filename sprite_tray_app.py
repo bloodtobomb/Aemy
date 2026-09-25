@@ -488,6 +488,7 @@ class OverlayController:
     def show_about(self):
         """Small About dialog. Must run on the Tk (main) thread."""
         BG = "#1b1622"
+        EDGE = "#3a2f52"
         PINK = "#ff8fd0"
         CYAN = "#7fe6ea"
 
@@ -497,20 +498,34 @@ class OverlayController:
         top.configure(bg=BG)
         top.attributes("-topmost", True)
 
-        tk.Label(top, text="Aemy v%s" % app_version(), bg=BG, fg=PINK,
-                 font=("Segoe UI", 16, "bold")).pack(padx=24, pady=(18, 2))
-        tk.Label(top, text="Journey well", bg=BG, fg=CYAN,
+        # A framed panel, so the window echoes the bordered look:
+        #   +--------------------+
+        #   |  Aemy              |
+        #   |  Journey well      |
+        #   |  (kaomoji)         |
+        #   +--------------------+
+        panel = tk.Frame(top, bg=BG, highlightbackground=EDGE,
+                         highlightthickness=1)
+        panel.pack(padx=18, pady=18)
+
+        tk.Label(panel, text="Aemy", bg=BG, fg=PINK,
+                 font=("Segoe UI", 16, "bold")).pack(padx=26, pady=(16, 2))
+        tk.Label(panel, text="Journey well", bg=BG, fg=CYAN,
                  font=("Segoe UI", 10, "italic")).pack()
-        tk.Label(top, text="by bloodtobomb", bg=BG, fg="#6f6a9c",
-                 font=("Segoe UI", 8)).pack(pady=(3, 0))
-        # \U0001F497 is the pink heart. Written as an escape so this file
-        # stays pure ASCII and cannot be corrupted by an editor's encoding.
-        tk.Label(top, text="made in \U0001F497 in Solaris-3", bg=BG, fg=PINK,
-                 font=("Segoe UI", 8)).pack()
-        tk.Frame(top, bg=PINK, height=1).pack(fill="x", padx=30, pady=(12, 16))
-        tk.Button(top, text="Close", width=10, command=top.destroy, bg=BG,
-                  fg=CYAN, activebackground="#2a2233", activeforeground=PINK,
-                  relief="flat", bd=0, pady=4).pack(pady=(0, 18))
+        # Written as escapes so this file stays pure ASCII and cannot be
+        # corrupted by an editor's or Git's line-ending handling.
+        tk.Label(
+            panel,
+            text="\ufbe9\u0668\u0640\ufbe9"
+                 "\ufbe9\u0668\u0640\u2661"
+                 "\ufbe9\u0668\u0640\ufbe9\u0668\u0640",
+            bg=BG, fg=PINK, font=("Segoe UI", 11),
+        ).pack(pady=(8, 16))
+
+        # No Close button: Esc or a click anywhere dismisses the dialog.
+        top.bind("<Escape>", lambda e: top.destroy())
+        top.bind("<Button-1>", lambda e: top.destroy())
+        panel.bind("<Button-1>", lambda e: top.destroy())
 
         top.update_idletasks()
         w, h = top.winfo_reqwidth(), top.winfo_reqheight()
