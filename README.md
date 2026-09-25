@@ -118,7 +118,7 @@ your animation.
 
 ## Credits
 
-Made with love in **Solaris-3**.
+Made in 💗 in **Solaris-3**.
 
 The default sprite animation is **Aemeath**, a playable Resonator from
 *Wuthering Waves* by **Kuro Games** (released 23 May 2024). She is a 5-star
